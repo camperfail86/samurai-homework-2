@@ -30,6 +30,11 @@
 }
 
 .buttonsContainer {
+    width: 560px;
+    display: flex;
+    gap: 12px;
+    justify-content: right;
+    margin-bottom: 18px
 }
 
 .container {
@@ -56,4 +61,5 @@
 }
 
 .ageCol {
+    margin-left: -5px;
 }
