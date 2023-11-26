@@ -56,7 +56,7 @@ const HW13 = () => {
                     setCode('Код undefined')
                     setImage(errorUnknown)
                     setText('Error')
-                    setInfo(e.response.data.info)
+                    setInfo('Error')
                 }
                 // setInfo('')
             })
