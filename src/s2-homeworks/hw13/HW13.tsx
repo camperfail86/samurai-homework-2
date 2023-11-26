@@ -36,10 +36,9 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 setImage(success200)
-                setInfo('')
+                setInfo(res.data.info)
                 setText('...всё ок)')
                 // дописать
-
             })
             .catch((e) => {
                 // дописать
@@ -47,16 +46,19 @@ const HW13 = () => {
                     setCode('Код 500')
                     setImage(error500)
                     setText('эмитация ошибки на сервере')
+                    setInfo(e.response.data.info)
                 } else if (e.response.status === 400) {
                     setCode('Код 400')
                     setImage(error400)
                     setText('Ты не отправил success в body вообще!')
+                    setInfo(e.response.data.info)
                 } else {
                     setCode('Код undefined')
                     setImage(errorUnknown)
                     setText('Error')
+                    setInfo(e.response.data.info)
                 }
-                setInfo('')
+                // setInfo('')
             })
     }
 
