@@ -16,7 +16,7 @@ import errorUnknown from './images/error.svg'
 
 const HW13 = () => {
     const [code, setCode] = useState('')
-    const [text, setText] = useState('')
+    const [text, setText] = useState('text')
     const [info, setInfo] = useState('')
     const [image, setImage] = useState('')
 
@@ -73,7 +73,7 @@ const HW13 = () => {
                         onClick={send(true)}
                         xType={'secondary'}
                         // дописать
-                        disabled={!!info}
+                        disabled={!text}
                     >
                         Send true
                     </SuperButton>
@@ -82,7 +82,7 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         // дописать
-                        disabled={!!info}
+                        disabled={!text}
                     >
                         Send false
                     </SuperButton>
@@ -91,7 +91,7 @@ const HW13 = () => {
                         onClick={send(undefined)}
                         xType={'secondary'}
                         // дописать
-                        disabled={!!info}
+                        disabled={!text}
                     >
                         Send undefined
                     </SuperButton>
@@ -100,7 +100,7 @@ const HW13 = () => {
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
                         // дописать
-                        disabled={!!info}
+                        disabled={!text}
                     >
                         Send null
                     </SuperButton>
