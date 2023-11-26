@@ -37,6 +37,7 @@ const HW13 = () => {
                 setCode('Код 200!')
                 setImage(success200)
                 setInfo('')
+                setText('...всё ок)')
                 // дописать
 
             })
@@ -45,12 +46,15 @@ const HW13 = () => {
                 if (e.response.status === 500) {
                     setCode('Код 500')
                     setImage(error500)
+                    setText('эмитация ошибки на сервере')
                 } else if (e.response.status === 400) {
                     setCode('Код 400')
                     setImage(error400)
+                    setText('Ты не отправил success в body вообще!')
                 } else {
                     setCode('Код undefined')
                     setImage(errorUnknown)
+                    setText('Error')
                 }
                 setInfo('')
             })
